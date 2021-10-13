@@ -1,0 +1,254 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10654,        244]
+NotebookOptionsPosition[      9259,        209]
+NotebookOutlinePosition[      9659,        225]
+CellTagsIndexPosition[      9616,        222]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\</Users/jeremyd/git/ozzydavis/ozzydavis.github.io/\>\"", "]"}]], "Input",\
+
+ CellChangeTimes->{{3.843123704437852*^9, 3.843123722186277*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"b0f24951-c714-4ef5-ae0d-387b36873edb"],
+
+Cell[BoxData["\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io\"\>"], \
+"Output",
+ CellChangeTimes->{3.843123723110138*^9, 3.843123906678566*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"4ee5b385-9578-4155-bc30-fdbf1fc93ec5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"img", "=", 
+  RowBox[{"FileNames", "[", "\"\<images/*\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.843123026998172*^9, 3.843123045183921*^9}, 
+   3.84312373084387*^9, {3.843123881343556*^9, 3.84312390917647*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"b035f248-a838-45b3-8451-13bbd5305fab"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"images/IMG_2274.jpg\"\>", ",", "\<\"images/IMG_2277.jpg\"\>", 
+   ",", "\<\"images/IMG_2958.jpg\"\>", ",", "\<\"images/IMG_3824.jpg\"\>", 
+   ",", "\<\"images/IMG_3899.jpg\"\>", ",", "\<\"images/IMG_4039.jpg\"\>", 
+   ",", "\<\"images/IMG_4040.jpg\"\>", ",", "\<\"images/IMG_4087.jpg\"\>", 
+   ",", "\<\"images/IMG_4091.mp4\"\>", ",", "\<\"images/IMG_4102.jpg\"\>", 
+   ",", "\<\"images/IMG_4105.jpg\"\>", ",", "\<\"images/IMG_4221.jpg\"\>", 
+   ",", "\<\"images/IMG_4239.jpg\"\>", ",", "\<\"images/IMG_4337.jpg\"\>", 
+   ",", "\<\"images/IMG_4338.jpg\"\>", ",", "\<\"images/IMG_4361.jpg\"\>", 
+   ",", "\<\"images/IMG_4380.jpg\"\>", ",", "\<\"images/IMG_4419.jpg\"\>", 
+   ",", "\<\"images/IMG_4734.jpg\"\>", ",", "\<\"images/IMG_4808.jpg\"\>", 
+   ",", "\<\"images/IMG_5023.jpg\"\>", ",", "\<\"images/IMG_5261.jpg\"\>", 
+   ",", "\<\"images/IMG_5401.jpg\"\>", ",", "\<\"images/IMG_5469.jpg\"\>", 
+   ",", "\<\"images/IMG_5470.jpg\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.843123036940727*^9, 3.843123045953117*^9}, 
+   3.843123695405529*^9, {3.843123731367198*^9, 3.843123753389825*^9}, {
+   3.843123887610547*^9, 3.8431239097602797`*^9}, 3.843123981689302*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"f57f3c52-55ba-426a-8065-e9478147666e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["convert thumbs", "Section",
+ CellChangeTimes->{{3.8431237410368843`*^9, 
+  3.843123743468902*^9}},ExpressionUUID->"221f7c6a-e7de-43f1-bb2c-\
+2ead8e742abd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"\"\<images/\>\"", "\[Rule]", "\"\<thumbs\>\""}]}], "]"}], ",", 
+     RowBox[{"ImageResize", "[", 
+      RowBox[{
+       RowBox[{"Import", "[", 
+        RowBox[{"#", ",", "\"\<JPG\>\""}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "800", "}"}], ",", 
+         RowBox[{"{", "800", "}"}]}], "}"}]}], "]"}], ",", "\"\<JPG\>\"", ",", 
+     RowBox[{"CompressionLevel", "\[Rule]", ".35"}]}], "]"}], "&"}], "/@", 
+  "img"}]], "Input",
+ CellChangeTimes->{{3.843123050607929*^9, 3.843123228471444*^9}, {
+  3.843123274814816*^9, 3.843123339796165*^9}, {3.843123925745041*^9, 
+  3.843123963166226*^9}},ExpressionUUID->"c6a1a91b-176f-43e6-bfa4-\
+7171274b9180"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_\
+2274.jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_2277.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_2958.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_3824.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_3899.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4039.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4040.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4087.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4102.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4105.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4221.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4239.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4337.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4338.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4361.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4380.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4419.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4734.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_4808.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_5023.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_5261.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_5401.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_5469.\
+jpg\"\>", 
+   ",", "\<\"/Users/jeremyd/git/ozzydavis/ozzydavis.github.io/thumb/IMG_5470.\
+jpg\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.843123131791437*^9, {3.843123169475361*^9, 3.8431232292497463`*^9}, 
+   3.843123316487463*^9, 3.843123352786016*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"822ad2e7-1d22-412e-a685-94aef85ba0d0"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "Section",ExpressionUUID->"66a832a9-b990-4ede-af67-c247667768cc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringJoin", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+    "\"\<      <a href='\>\"", "<>", "#", "<>", "\"\<' data-ngthumb='\>\"", "<>", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\"\<images/\>\"", "\[Rule]", "\"\<thumbs/\>\""}], ",", 
+         RowBox[{"\"\<.mp4\>\"", "\[Rule]", "\"\<.jpg\>\""}]}], "}"}]}], 
+      "]"}], "<>", "\"\<'></a>\\n\>\""}], "&"}], "/@", "img"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.843123767039721*^9, 3.843123866471549*^9}, {
+  3.843123989350588*^9, 3.843124042732257*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"185878b9-1aab-4c91-9fe9-f4e682075eb7"],
+
+Cell[BoxData["\<\"      <a href='images/IMG_2274.jpg' \
+data-ngthumb='thumbs/IMG_2274.jpg'></a>\\n      <a href='images/IMG_2277.jpg' \
+data-ngthumb='thumbs/IMG_2277.jpg'></a>\\n      <a href='images/IMG_2958.jpg' \
+data-ngthumb='thumbs/IMG_2958.jpg'></a>\\n      <a href='images/IMG_3824.jpg' \
+data-ngthumb='thumbs/IMG_3824.jpg'></a>\\n      <a href='images/IMG_3899.jpg' \
+data-ngthumb='thumbs/IMG_3899.jpg'></a>\\n      <a href='images/IMG_4039.jpg' \
+data-ngthumb='thumbs/IMG_4039.jpg'></a>\\n      <a href='images/IMG_4040.jpg' \
+data-ngthumb='thumbs/IMG_4040.jpg'></a>\\n      <a href='images/IMG_4087.jpg' \
+data-ngthumb='thumbs/IMG_4087.jpg'></a>\\n      <a href='images/IMG_4091.mp4' \
+data-ngthumb='thumbs/IMG_4091.jpg'></a>\\n      <a href='images/IMG_4102.jpg' \
+data-ngthumb='thumbs/IMG_4102.jpg'></a>\\n      <a href='images/IMG_4105.jpg' \
+data-ngthumb='thumbs/IMG_4105.jpg'></a>\\n      <a href='images/IMG_4221.jpg' \
+data-ngthumb='thumbs/IMG_4221.jpg'></a>\\n      <a href='images/IMG_4239.jpg' \
+data-ngthumb='thumbs/IMG_4239.jpg'></a>\\n      <a href='images/IMG_4337.jpg' \
+data-ngthumb='thumbs/IMG_4337.jpg'></a>\\n      <a href='images/IMG_4338.jpg' \
+data-ngthumb='thumbs/IMG_4338.jpg'></a>\\n      <a href='images/IMG_4361.jpg' \
+data-ngthumb='thumbs/IMG_4361.jpg'></a>\\n      <a href='images/IMG_4380.jpg' \
+data-ngthumb='thumbs/IMG_4380.jpg'></a>\\n      <a href='images/IMG_4419.jpg' \
+data-ngthumb='thumbs/IMG_4419.jpg'></a>\\n      <a href='images/IMG_4734.jpg' \
+data-ngthumb='thumbs/IMG_4734.jpg'></a>\\n      <a href='images/IMG_4808.jpg' \
+data-ngthumb='thumbs/IMG_4808.jpg'></a>\\n      <a href='images/IMG_5023.jpg' \
+data-ngthumb='thumbs/IMG_5023.jpg'></a>\\n      <a href='images/IMG_5261.jpg' \
+data-ngthumb='thumbs/IMG_5261.jpg'></a>\\n      <a href='images/IMG_5401.jpg' \
+data-ngthumb='thumbs/IMG_5401.jpg'></a>\\n      <a href='images/IMG_5469.jpg' \
+data-ngthumb='thumbs/IMG_5469.jpg'></a>\\n      <a href='images/IMG_5470.jpg' \
+data-ngthumb='thumbs/IMG_5470.jpg'></a>\\n\"\>"], "Output",
+ CellChangeTimes->{{3.84312402786596*^9, 3.843124043363573*^9}},
+ CellLabel->"Out[39]=",ExpressionUUID->"bcdd1962-760b-4fe3-84bf-88c522f0d17e"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1365, 1210},
+WindowMargins->{{Automatic, 244}, {32, Automatic}},
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c422707f-cb95-4e7a-94b9-111e5628201a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 271, 5, 30, "Input",ExpressionUUID->"b0f24951-c714-4ef5-ae0d-387b36873edb"],
+Cell[854, 29, 228, 3, 34, "Output",ExpressionUUID->"4ee5b385-9578-4155-bc30-fdbf1fc93ec5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1119, 37, 317, 5, 30, "Input",ExpressionUUID->"b035f248-a838-45b3-8451-13bbd5305fab"],
+Cell[1439, 44, 1292, 18, 98, "Output",ExpressionUUID->"f57f3c52-55ba-426a-8065-e9478147666e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2768, 67, 161, 3, 67, "Section",ExpressionUUID->"221f7c6a-e7de-43f1-bb2c-2ead8e742abd"],
+Cell[CellGroupData[{
+Cell[2954, 74, 829, 21, 30, "Input",ExpressionUUID->"c6a1a91b-176f-43e6-bfa4-7171274b9180"],
+Cell[3786, 97, 2429, 53, 266, "Output",ExpressionUUID->"822ad2e7-1d22-412e-a685-94aef85ba0d0"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6264, 156, 74, 0, 67, "Section",ExpressionUUID->"66a832a9-b990-4ede-af67-c247667768cc"],
+Cell[CellGroupData[{
+Cell[6363, 160, 686, 16, 30, "Input",ExpressionUUID->"185878b9-1aab-4c91-9fe9-f4e682075eb7"],
+Cell[7052, 178, 2179, 27, 560, "Output",ExpressionUUID->"bcdd1962-760b-4fe3-84bf-88c522f0d17e"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
